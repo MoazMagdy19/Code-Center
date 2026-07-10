@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Center</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" type="image/png" href="WhatsApp_Image_2026-07-11_at_1.29.28_AM-removebg-preview.png">
+  <link rel="shortcut icon" href="WhatsApp_Image_2026-07-11_at_1.29.28_AM-removebg-preview.png">
+  <link rel="apple-touch-icon" href="WhatsApp_Image_2026-07-11_at_1.29.28_AM-removebg-preview.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon"><img src="WhatsApp_Image_2026-07-11_at_1.29.28_AM-removebg-preview.png" alt="Logo"></div>
+        <div>
+          <p class="brand-name" data-i18n="appName">Code Center</p>
+          <p class="brand-sub" data-i18n="appSubtitle">Offline Manager</p>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-link active" data-page="dashboard"><span class="nav-icon">🏠</span><span data-i18n="nav_dashboard">Dashboard</span></a>
+        <a href="#" class="nav-link" data-page="students"><span class="nav-icon">👥</span><span data-i18n="nav_students">Students</span></a>
+        <a href="#" class="nav-link" data-page="courses"><span class="nav-icon">📚</span><span data-i18n="nav_courses">Courses</span></a>
+        <a href="#" class="nav-link" data-page="schedule"><span class="nav-icon">🗓️</span><span data-i18n="nav_schedule">Weekly Schedule</span></a>
+        <a href="#" class="nav-link" data-page="attendance"><span class="nav-icon">✅</span><span data-i18n="nav_attendance">Attendance</span></a>
+        <a href="#" class="nav-link" data-page="payments"><span class="nav-icon">💳</span><span data-i18n="nav_payments">Payments</span></a>
+        <a href="#" class="nav-link" data-page="finance"><span class="nav-icon">📈</span><span data-i18n="nav_finance">Finance</span></a>
+        <a href="#" class="nav-link" data-page="reports"><span class="nav-icon">📊</span><span data-i18n="nav_reports">Reports</span></a>
+        <a href="#" class="nav-link" data-page="materials"><span class="nav-icon">📁</span><span data-i18n="nav_materials">Course Materials</span></a>
+        <a href="#" class="nav-link" data-page="notes"><span class="nav-icon">🗒️</span><span data-i18n="nav_notes">Notes</span></a>
+        <a href="#" class="nav-link" data-page="tasks"><span class="nav-icon">✔️</span><span data-i18n="nav_tasks">Tasks</span></a>
+        <a href="#" class="nav-link" data-page="settings"><span class="nav-icon">⚙️</span><span data-i18n="nav_settings">Settings</span></a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="icon-btn menu-toggle" id="menu-toggle-btn" aria-label="menu">☰</button>
+        <div class="topbar-spacer"></div>
+        <button class="btn btn-secondary btn-sm" id="lang-toggle-btn">العربية</button>
+        <button class="icon-btn" id="theme-toggle-btn" aria-label="toggle theme"><span id="theme-toggle-icon">🌙</span></button>
+      </header>
+      <main id="main-content" class="main-content"></main>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="modal"></div>
+  </div>
+
+  <!-- Toasts -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/db.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/courses.js"></script>
+  <script src="js/students.js"></script>
+  <script src="js/schedule.js"></script>
+  <script src="js/attendance.js"></script>
+  <script src="js/payments.js"></script>
+  <script src="js/finance.js"></script>
+  <script src="js/reports.js"></script>
+  <script src="js/materials.js"></script>
+  <script src="js/notes.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js');
+}
+</script>
+</body>
+</html>
